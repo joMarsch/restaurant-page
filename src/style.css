@@ -28,3 +28,20 @@ nav > ul {
     width: 75%;
     background-color: bisque;
 }
+
+.content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content > div * {
+    background-color: burlywood;
+}
+
+#welcome-logo {
+    display: flex;
+    flex-direction: column;
+    font-size: min(64px, 10vw);
+    align-items: center;
+}
