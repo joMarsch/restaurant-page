@@ -9,7 +9,8 @@ const container = document.querySelector(".container");
 
 // Module for the menubar, returns the container
 const menubar = (function () {
-    const container = document.createElement("nav");
+    const container = document.createElement("div");
+    container.classList.add("header");
 
     const createMenubarItem = (text, content) => {
         var li = document.createElement("li");
@@ -27,9 +28,19 @@ const menubar = (function () {
         return li;
     };
 
-    // Function to build the menubar which is instantly executed
+    // Instant function to build the title
+    (function buildTitle() {
+        var title = document.createElement("h1");
+        title.innerHTML = "Burgerpalace";
+        container.appendChild(title);
+    })();
+
+    // Instant function to build the menubar 
     (function buildMenubar() {
-        container.appendChild(document.createElement("ul"))
+        const navigationBar = document.createElement("nav")
+        navigationBar.id = "navigation-bar";
+        navigationBar.appendChild(document.createElement("ul"))
+        container.appendChild(navigationBar);
 
         const anchors = [
             createMenubarItem("Home", home),
@@ -37,7 +48,7 @@ const menubar = (function () {
             createMenubarItem("Contact", contact)
         ];
 
-        anchors.forEach(anchor => container.firstChild.appendChild(anchor));
+        anchors.forEach(anchor => navigationBar.firstChild.appendChild(anchor));
     })();
 
     return { container };

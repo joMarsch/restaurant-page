@@ -11,9 +11,10 @@ h1 {
     color: red;
 }
 
-nav {
+.header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: aqua;
 }
 
@@ -42,6 +43,14 @@ nav > ul {
 #welcome-logo {
     display: flex;
     flex-direction: column;
-    font-size: min(64px, 10vw);
+    font-size: min(64px, 8vw);
     align-items: center;
+}
+
+#home img {
+    width: min(600px, 80%);
+}
+
+#home p {
+    width: min(600px, 80%);
 }
