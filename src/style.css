@@ -1,3 +1,7 @@
+:root {
+    --min-width: 500px;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -17,4 +21,10 @@ nav > ul {
     display: flex;
     gap: 32px;
     list-style-type: none;
+}
+
+.content {
+    margin: 0px auto;
+    width: 75%;
+    background-color: bisque;
 }
