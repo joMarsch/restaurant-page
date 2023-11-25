@@ -6,3 +6,15 @@
 h1 {
     color: red;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+nav > ul {
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+}
