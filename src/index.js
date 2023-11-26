@@ -66,4 +66,4 @@ const content = (function () {
 
 container.appendChild(menubar.container);
 container.appendChild(content.container);
-document.querySelector(".content").appendChild(home.container)
+document.querySelector(".content").appendChild(contact.container)

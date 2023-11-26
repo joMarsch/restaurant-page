@@ -1,5 +1,6 @@
 :root {
-    --min-width: 500px;
+    --content-container-max-width: 800px;
+    --content-max-width: min(600px, 80%);
 }
 
 * {
@@ -7,8 +8,14 @@
     padding: 0px;
 }
 
-h1 {
-    color: red;
+body { 
+    min-height: 100vh; 
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -26,8 +33,9 @@ nav > ul {
 
 .content {
     margin: 0px auto;
-    width: 75%;
+    width: min(75%, var(--content-container-max-width));
     background-color: bisque;
+    flex-grow: 1;
 }
 
 .content > div {
@@ -36,6 +44,7 @@ nav > ul {
     align-items: center;
 }
 
+/* Helper for prototyping, needs deletion when finishing up */
 .content > div * {
     background-color: burlywood;
 }
@@ -48,9 +57,9 @@ nav > ul {
 }
 
 #home img {
-    width: min(600px, 80%);
+    width: var(--content-max-width);
 }
 
 #home p {
-    width: min(600px, 80%);
+    width: var(--content-max-width);
 }
