@@ -63,3 +63,14 @@ nav > ul {
 #home p {
     width: var(--content-max-width);
 }
+
+.contact-container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-auto-rows: max-content;
+}
+
+.contact-container img {
+    height: 1em;
+    width: auto;
+}

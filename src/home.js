@@ -32,7 +32,10 @@ const home = (function () {
     (function buildText() {
         const paragraph = document.createElement("p");
 
-        paragraph.innerHTML = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        paragraph.innerHTML = `This might be the best place to get a burger. But who knows?
+        Maybe there are better places but do you really want to find out? 
+        I would, because this restaurant does not exist and you might stay hungry if you try
+        to get a burger from us`;
 
         container.appendChild(paragraph);
     })();
