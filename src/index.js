@@ -64,6 +64,21 @@ const content = (function () {
     return { container };
 })();
 
+const footer = (function () {
+    const container = document.createElement("div");
+    container.classList.add("footer")
+
+    const anchor = document.createElement("a");
+    anchor.innerHTML = "Spencer Davis";
+    anchor.href = "https://unsplash.com/de/@spencerdavis";
+
+    container.innerHTML = "Background image by ";
+    container.appendChild(anchor);
+
+    return { container };
+})();
+
 container.appendChild(menubar.container);
 container.appendChild(content.container);
-document.querySelector(".content").appendChild(contact.container)
+document.querySelector(".content").appendChild(home.container)
+container.appendChild(footer.container);

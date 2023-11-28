@@ -35,7 +35,7 @@ const home = (function () {
         paragraph.innerHTML = `This might be the best place to get a burger. But who knows?
         Maybe there are better places but do you really want to find out? 
         I would, because this restaurant does not exist and you might stay hungry if you try
-        to get a burger from us`;
+        to get a burger from us.`;
 
         container.appendChild(paragraph);
     })();

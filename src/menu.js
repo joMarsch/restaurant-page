@@ -10,7 +10,7 @@ class Item {
     }
 
     get price() {
-        return this._price;
+        return this._price + "€";
     }
 
     get ingredients() {
@@ -23,7 +23,7 @@ const menuItems = (function () {
     const basicIngredients = [
         "Burger Bun",
         "Tomatoes",
-        "Salat",
+        "Salad",
         "Pickles"
     ];
 

@@ -1,15 +1,24 @@
 :root {
     --content-container-max-width: 800px;
-    --content-max-width: min(600px, 80%);
+    --content-max-width: min(600px, 100%);
+    --header-footer-color: rgb(153, 77, 28);
+    --header-foot-font-color: rgb(245, 204, 160);
+    --content-color: rgba(228, 143, 69, 0.95);
+    --font-color: rgb(107, 36, 12);
+    --footer-height: 32px
 }
 
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body { 
-    min-height: 100vh; 
+body {
+    min-height: 100vh;
+    color: var(--font-color);
+    background-image: url(./images/spencer-davis-ckotRXopwRM-unsplash.jpg);
+    background-position: center;
 }
 
 .container {
@@ -22,31 +31,51 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
+    color: var(--header-foot-font-color);
+    background-color: var(--header-footer-color);
+    padding: 8px;
 }
 
-nav > ul {
+nav>ul {
     display: flex;
     gap: 32px;
     list-style-type: none;
+    font-size: 1.2em;
+    color: var(--header-foot-font-color);
+    font-style: italic;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--header-foot-font-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
 }
 
 .content {
     margin: 0px auto;
+    padding: 32px;
     width: min(75%, var(--content-container-max-width));
-    background-color: bisque;
+    background-color: var(--content-color);
     flex-grow: 1;
+    margin-bottom: var(--footer-height);
 }
 
-.content > div {
+.content>div {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Helper for prototyping, needs deletion when finishing up */
-.content > div * {
-    background-color: burlywood;
+    gap: 16px;
 }
 
 #welcome-logo {
@@ -56,21 +85,50 @@ nav > ul {
     align-items: center;
 }
 
-#home img {
+#home img,
+#home p {
     width: var(--content-max-width);
 }
 
-#home p {
-    width: var(--content-max-width);
+.item-container div>div:first-child {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.item-container div>div:nth-child(3) {
+    font-style: italic;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+#contact>h3 {
+    margin-bottom: -8px;
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-auto-rows: max-content;
+    column-gap: 6px;
 }
 
 .contact-container img {
-    height: 1em;
+    height: 1.4em;
     width: auto;
+}
+
+.footer {
+    height: var(--footer-height);
+    background-color: var(--header-footer-color);
+    color: var(--header-foot-font-color);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
